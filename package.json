@@ -1,0 +1,22 @@
+{
+  "name": "workspace",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "echo \"Skipping preinstall on Windows\"",
+    "build": "pnpm run typecheck && pnpm -r --if-present run build",
+    "typecheck:libs": "tsc --build",
+    "typecheck": "pnpm run typecheck:libs && pnpm -r --filter \"./client\" --filter \"./server\" --filter \"./scripts\" --if-present run typecheck",
+    "dev:api": "pnpm --filter @workspace/api-server run dev:local",
+    "dev:client": "pnpm --filter @workspace/career-ai run dev",
+    "dev": "pnpm run dev:api & pnpm run dev:client"
+  },
+  "private": true,
+  "devDependencies": {
+    "@types/node": "catalog:",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "prettier": "^3.8.1",
+    "typescript": "~5.9.2"
+  }
+}

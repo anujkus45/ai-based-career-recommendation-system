@@ -1,0 +1,13 @@
+packages:
+  "framer-motion": "For page transitions and smooth animated quiz steps"
+  "canvas-confetti": "For celebratory visual effects when revealing the career recommendation"
+  "@types/canvas-confetti": "TypeScript definitions for canvas-confetti"
+
+images:
+  - path: "artifacts/career-ai/public/images/hero-bg.png"
+    description: "Abstract geometric background with deep indigo, purple, and warm gold accents, glowing soft light leaks, premium clean modern corporate style, uncluttered"
+    aspect_ratio: "16:9"
+
+notes:
+  - "Using generated hooks from @workspace/api-client-react for all API interactions"
+  - "Using custom context for cross-page state management (quiz answers to results)"

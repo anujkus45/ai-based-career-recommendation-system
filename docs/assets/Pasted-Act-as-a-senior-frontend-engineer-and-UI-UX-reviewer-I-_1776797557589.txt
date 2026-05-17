@@ -1,0 +1,97 @@
+Act as a senior frontend engineer and UI/UX reviewer.
+
+I have an AI Career Recommendation web app. Apply fixes directly in my code.
+
+Your task: Implement the following improvements (not just suggest).
+
+----------------------
+CRITICAL FIXES (do first)
+----------------------
+1. Unify theme:
+- Convert Login page to same LIGHT theme as app (no dark gradient mismatch)
+
+2. Fix Footer:
+- Replace Hinglish text with proper English
+- Correct all links:
+  /quiz
+  /stream-selector
+  /compare
+  /cost
+  /skill-gap
+
+3. Fix routing:
+- "/" should redirect to "/dashboard"
+- Rename Home.tsx → Quiz.tsx and update routes
+
+4. Remove misleading UI:
+- Delete fake "steps" section from quiz landing
+- Either make category cards clickable OR remove them
+
+5. Add empty states:
+- Compare, Cost, Stream pages must show placeholder UI before input
+
+6. Add global error handling:
+- Show error + retry button for all API calls
+
+----------------------
+MAJOR FIXES
+----------------------
+7. Cross-page data flow:
+- Pass selected career between pages using query params
+- Auto-fill inputs (e.g. Cost page)
+
+8. Resume quiz feature:
+- Save progress in localStorage
+- Show "Resume Quiz (x/y)" on dashboard
+
+9. Improve dashboard layout:
+- Convert Quick Actions into 2-column grid on desktop
+- Fill empty space with extra cards (tips / insights)
+
+10. Add navigation support:
+- Add breadcrumb or "← Dashboard" on all pages
+
+11. Validate inputs:
+- Prevent invalid career names in Compare
+
+12. Improve mobile UX:
+- Add bottom fixed CTA button (Start Assessment)
+
+----------------------
+UI CONSISTENCY FIXES
+----------------------
+13. Standardize design:
+- Cards: rounded-2xl
+- Buttons: rounded-xl
+- Limit colors to primary (blue) + secondary (purple)
+
+14. Typography:
+- Hero: large
+- Section: medium
+- Card: small (consistent everywhere)
+
+15. Fix contrast + accessibility:
+- Replace text-gray-400 → text-gray-500
+- Add focus-visible ring styles
+
+----------------------
+ENGAGEMENT + FEATURES
+----------------------
+16. Add save/bookmark system:
+- Save results (assessment, compare, cost)
+
+17. Add share feature:
+- Web Share API or copy link
+
+18. Replace spinners:
+- Add better loading states with text (AI thinking steps)
+
+19. Add skeleton loaders instead of blank/spinner
+
+----------------------
+OUTPUT FORMAT
+----------------------
+- Apply changes directly in code
+- Show updated components/files
+- Keep code clean and production-ready
+- Do not explain, just implement
