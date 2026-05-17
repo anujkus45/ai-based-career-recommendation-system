@@ -1,8 +1,0 @@
-uploads = []
-generated = []
-
-[[outputs]]
-id = "8mWj28ElKBtxLMEMcTIL9"
-uri = "file://LOCAL_SETUP.md"
-type = "text"
-title = "Local Setup Guide — AI Career Recommendations System"
